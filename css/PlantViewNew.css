@@ -1,0 +1,529 @@
+ {
+    font: 4pt Helvetica;
+}
+
+.overlay  {
+     visibility: hidden; 
+     position: absolute;
+     left: 25%;
+     top: 15%;
+     width:45%;
+     height:70%;
+     text-align:center;
+     background-color:#EAF1F6;
+     border: 1px solid #000000;
+     z-index: 1000;
+    -moz-opacity: 0.8;
+}
+
+.pageTextBoxReadOnly { 
+	border: 1px solid #5F87BA;
+	font-weight: normal;
+ 	color: #000000; 
+	background: #D4D9DE;
+	readOnly:true;
+}
+
+.txtborder{
+	border: 1px solid #5F87BA;
+}
+
+fieldset {
+  padding: 0.2em;
+  border:1px solid #5F87BA;
+  }
+ 
+legend {
+  padding: 0em 0em;
+  color:#5F87BA;
+  text-align:right;
+  font-weight:bold;
+  }
+
+BODY {
+  /* Scrollbar setting */
+	scrollbar-base-color:#3B5E94;
+	scrollbar-arrow-color:#2F3B47;
+	scrollbar-darkshadow-color:#45637F;
+	scrollbar-face-color:#DDE9F5;
+	scrollbar-highlight-color:#EBFCFF;
+	scrollbar-shadow-color:#A1BDCB;
+	scrollbar-track-color:#BBD1E8;
+  /* Border Setting */
+	padding: 0px; 
+	margin:auto;
+  /*Background filter makes problems when scrolling applets and selects*/
+	/* background-color:	#E0DCDD */
+}
+
+.dropdown {
+	width: 400px;
+	height: 30px;
+}
+
+/*========================= ContextMenu ====================== */
+
+	#contextMenu{	/* The menu container */
+		border:1px solid #202867;	/* Border around the entire menu */
+		background-color:#FFF;	/* White background color of the menu */
+		margin:0px;
+		padding:0px;
+		width:200px;	/* Width of context menu */
+		font-family:arial;
+		font-size:12px;
+		background-image:url('images/gradient.gif');
+		background-repeat:repeat-y;
+		z-index: 100;    
+		opacity:1;
+		/* Never change these two values */
+		display:none;
+		position:absolute;
+
+	}
+	#contextMenu a{	/* Links in the context menu */
+		color: #000;
+		text-decoration:none;
+		line-height:25px;
+		vertical-align:middle;	
+		height:28px;
+		
+		/* Don't change these 3 values */
+		display:block;	
+		width:100%;
+		clear:both;
+		
+	}
+	#contextMenu li{	/* Each menu item */
+		list-style-type:none;
+		padding:1px;
+		margin:1px;
+		cursor:pointer;	
+		clear:both;
+	}
+	#contextMenu li div{	/* Dynamically created divs */
+		cursor:pointer;	
+	}
+	#contextMenu .contextMenuHighlighted{	/* Highlighted context menu item */
+		border:1px solid #000;
+		padding:0px;
+		background-color:#E2EBED;
+	
+	}
+	#contextMenu img{
+		border:0px;
+	}
+	#contextMenu .imageBox{	/* Dynamically created divs for images in the menu */
+
+		float:left;
+		padding-left:2px;
+		padding-top:3px;
+		vertical-align:middle;
+		z-index: 100;    
+		opacity:1;
+		width: 30px;	/* IE 5.x */
+		width/* */:/**/28px;	/* Other browsers */
+		width: /**/28px;
+	}
+	#contextMenu .itemTxt{
+		float:left;		
+		width: 120px;	/* IE 5.x */
+		width/* */:/**/140px;	/* Other browsers */
+		width: /**/140px;		
+	}
+
+
+/*=================================================================================*/
+
+
+/* === Content Containers  =========================================================== */
+
+.ContentTitleBar {
+	height: 28px;
+	border:1px solid #A4ADB6;
+/*	background-color: #C0D2E5;*/
+
+	background-color: #B2CADD;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#D1E1F1,endColorStr=#AEC3D8);
+	padding-left: 10px;
+}
+.ContentTitle {
+	color: #000000;
+	background-color: #5F87BA;
+	font-size: 180%;
+	font-weight: 900;
+}
+.ContentSubTitle {
+	color: #000000;
+	background-color: #4682B4;
+	font-weight: bold;
+}
+.ContentSubTitleBar { 
+	height: 20px;
+	border:1px solid #5F87BA;
+	border-top:1px solid #5F87BA;
+	background-color: #BAD2E8;
+	/* OLD: startColorStr=#A8C7E2,endColorStr=#F8C2C6 */
+/*	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#F9EEB5,endColorStr=#F8C2C6); */
+	padding: 5px;
+	padding-top: 1px;
+	padding-bottom: 0px;
+}
+.ContentHeader {
+	border:1px solid #E41F2B;
+	background-color: #000000;
+	padding: 5px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+.ContentHeaderSection {
+	border:1px solid #5F87BA;
+	border-top:1px solid #5F87BA;
+	background-color: #EAF1F6;
+	padding: 5px;
+}
+.Content {
+	border:0px solid #D7DDE7;
+	background-color: #EAF1F6;
+	padding: 0px;
+}
+/* For scrolling DIV container*/
+.ScrollDiv {
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+.HeaderSeparator{
+	border-left: 1px solid #B5C9DA;
+	width: 6px; /* must be twice the margin-right of class 'boldbuttons'*/
+}
+/*--- For buttons right of value entry fields ---*/
+.ValueButton{
+	height:	16px;
+	cursor:	hand;
+	margin-left:	5px;
+}
+
+/* === Value Help Popup Buttons =========================================================== */
+.ValuePopupButtons{
+	padding-left: 5px; 
+	padding-right: 5px
+}
+.ValuePopupButtons A{
+	text-align: center;
+	width: 100%;
+}
+
+/* === Tab Strip Styles ==================================================================== */
+.TabBottomLine{
+	font-size: 0px; 
+	height: 5px; 
+	width: 100%; 
+	border-bottom: 1px solid #547CA3; 
+	background-color: #91ABC6;
+}
+.TabLeftSpacer{
+	font-size: 0; 
+	width: 10px; 
+	height: 10px; 
+	border-right: 1px solid #8EADCE
+}
+.TabActive SPAN {
+	font-weight: 900;
+}
+.Tab{
+	height: 22px;
+	border:1px solid #8EADCE;
+	border-bottom: none;
+	border-left: none;
+	padding: 0px;	
+	position: relative;
+}
+.Tab A {
+	line-height: 22px; 
+	height: 100%;
+	padding-left: 15px; 
+	padding-right: 10px;
+	padding-top: 4px;
+	text-decoration: none;
+	color: #000000; 
+	cursor: default;
+}
+.TabNormal{
+	background-color: #F9EEB5;
+	FILTER:  progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#F9EEB5,endColorStr=#CFDDE8);
+}
+A:hover.TabNormal {
+	background-color: #91ABC6;
+	FILTER:  progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#F9EEB5,endColorStr=#91ABC6);
+}
+.TabActive{
+	background-color: #91ABC6;
+	FILTER:  progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#B7C9D9,endColorStr=#91ABC6);
+}
+.TabCornerIcon{
+	position: absolute; 
+	top: -1; 
+	background-image:url(/XMII/CM/SAP_BM/Common/Images/TabCornerDarker.gif); 
+	height: 12px; 
+	width: 12px;
+}
+
+/* === Log Line ================================================================================= */
+.LogBar {
+	border:1px solid #E41F2B;
+	border-top: none;
+	border-bottom: none;
+	background-color: #FFFFFF;
+	padding: 3px;
+	padding-left: 5px;
+}
+.LogMessage{
+	padding-left: 5px;
+	color: #000000;
+}
+
+
+
+/* === iFrame Popups ================================================================================= */
+#PopupShell {
+	position: absolute;
+	visibility: hidden; 
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	border: none;
+	padding: 0px;
+}
+.PopupFrameOut {
+	border: 1px solid #555; 
+	border-top-color: #F9F9F9; 
+	border-left-color: #F9F9F9;
+}
+.PopupFrameIn{
+	border: 1px solid #72A4D0;
+}
+.PopupTitleBar {
+	height: 20px;
+	border-bottom:1px solid #E41F2B;
+	background-color: #72A4D0;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#72A4D0,endColorStr=#F8C2C6);
+	padding: 5px;
+	padding-top: 1px;
+	padding-bottom: 0px;
+}
+.PopupTitle {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+
+
+
+
+/* === Styles from MII Best Practices =============================================================== */
+
+/* set the formatting of the rollover buttons   */	
+a.boldbuttons, a.boldbuttonsDis{
+	float: left;
+	line-height: 12px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 30px) */
+	display: block;
+	padding-left: 5px; /* Width of left menu image */
+	text-decoration: none;
+	BORDER: 1px solid #87857E;
+	margin-right: 3px;
+   /* For active button only */
+	background-color:rgb(249,238,181);
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FEF7DB,endColorStr=#E8D16C);
+	CURSOR: pointer;
+	color: #000000; 
+}
+
+a.boldbuttonsDis{
+	background-color: #FAE8A4;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFFFFF,endColorStr=#FAE8A4);
+	CURSOR: default;
+	color: #777777;
+}
+
+/* set the formatting of the rollover buttons   */	
+a.boldbuttons span, a.boldbuttonsDis span{
+	display: block;
+	padding: 2px 7px 2px 2px; /*Set 10px to be equal or greater than'padding-left' value above*/
+}
+
+/* set the formatting of the rollover buttons   */	
+a:hover.boldbuttons{     
+	background-color:rgb(248,189,71);
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFF2D5,endColorStr=#F6B828);
+}
+
+/* formatting for individual text boxes where user types  */		
+.txtFieldNumber, .txtField{
+	border:1px solid E41F2B;
+	color: #000000;
+	background-color: #ffffff;
+	type:text;
+	padding-left: 3px;
+	margin-left: 0px;
+	}
+
+
+.txtField{
+size:15%;
+}
+
+
+.txtFieldNumber{
+	text-align: right;
+}
+
+.txtFieldNumberDis{
+	text-align: right;
+}
+
+/* formatting for individual text boxes that are disabled  */	
+.txtFieldNumberDis, .txtFieldDis{
+	background-color:rgb(235,239,242);
+	color: #777777;
+	border:1px solid E41F2B;
+	padding-left: 3px;
+	margin-left: 0px;
+}
+
+/* formatting for buttons  */		
+	.buttons{
+		text-align:center;
+		text-decoration:none;
+		color:White;
+		border: 1px solid #FFC54E;
+		background-color:#228B22;
+		cursor: hand;
+		width:200px;
+		}
+
+.ordDiv {
+	z-index : -1;
+//	position: absolute;
+}
+
+/* formatting for modal windows */
+
+.divPopup  {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     background-color:#dce8f3;
+     opacity: 0.5;
+     z-index: 1000;
+    filter:alpha(opacity=75);
+    -moz-opacity: 0.8;
+}
+
+body {
+     margin:0px;
+}
+
+
+
+.divSub {
+     width:40%;
+     margin: 100px auto;
+     background-color: #dce8f3;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+    filter:alpha(opacity=100);
+}
+
+
+.selField{
+	border: 15px solid #E41F2B;
+	background-color: ##E41F2B;
+	color: #003366;
+	width: 100%;
+	}
+
+.messageAreaStyle { 
+	font-family: Helvetica; font-size: 12px;
+	font-weight: bold;
+ 	 background:#420042;
+	border-color:#FFC54E;border:2px solid #FFC54E;
+	filter: alpha(opacity=80);
+	z-index: 1;    
+    	width: 30%;
+    	height: 25px:
+/*    	border: 1px solid #666666;*/
+   	text-align: left;
+   	position: absolute;
+   	top: 92%;
+   	left: 26%;
+/*	display:none;*/
+	cursor:hand;position:absolute ;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #555566;
+
+}
+
+.iframeshim {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:95%;
+     z-index:400;
+     opacity: 0.5;
+     background:#5F87BA;
+     filter:alpha(opacity=75);
+}
+
+.loading  {
+     font-size: 12pt;
+     font-weight: bold;
+     position: absolute;
+     left: 40%;
+     top: 35%;
+     width:20%;
+     height:3%;
+     text-align:center;
+     background-color:#B2CADD;
+     opacity: 0.5;
+     z-index: 500;
+    filter:alpha(opacity=75);
+    -moz-opacity: 0.8;
+}
+
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	
+	border-width: 1px;
+	border-color: #F7FAFC;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFCEF6;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFCEF6;
+}
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+}
+
+
